@@ -1,0 +1,236 @@
+@import "./media_queries.scss";
+
+@font-face {
+  font-family: 'bodonixtregular';
+  src: url('./webfonts/BodoniXT-webfont.eot');
+  src: url('./webfonts/BodoniXT-webfont.eot?#iefix') format('embedded-opentype'),
+       url('./webfonts/BodoniXT-webfont.woff2') format('woff2'),
+       url('./webfonts/BodoniXT-webfont.woff') format('woff'),
+       url('./webfonts/BodoniXT-webfont.ttf') format('truetype'),
+       url('./webfonts/BodoniXT-webfont.svg#bodonixtregular') format('svg');
+  /*src: url('./webfonts/BodoniXT-webfont.woff') format('woff'),
+       url('./webfonts/BodoniXT-webfont.ttf') format('truetype');
+  */
+  font-weight: normal;
+  font-style: normal;
+}
+
+html
+{
+    height:100%;
+    width:100%;
+}
+
+body {
+  background-color: rgb(0,0,0);
+  color: white;
+  //font: 1.3rem Inconsolata, monospace;
+  font-family: 'bodonixtregular';
+  font-size: 1.3rem;
+
+  @include for-tablet-landscape-up {    
+    font-size: 1.4rem;
+  }
+
+  @include for-desktop-up {    
+    font-size: 1.45rem;
+  }
+
+  width: 100%;
+  margin: 0;
+  height: 100%;
+  //text-shadow: 0 0 5px #C8C8C8;
+  &::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(black, 0.15),
+      rgba(black, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    pointer-events: none;
+  }
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  @include for-tablet-landscape-up {    
+    width: 90%; 
+ }
+  @include for-desktop-up {    
+    width: 85%; 
+  }
+}
+
+@import "./header.scss";
+
+main {
+  background-color: rgb(35,35,35);
+  padding: 50px;
+  padding-top: 10px;
+
+  @include for-phone-only {    
+    padding: 30px;
+    padding-top: 10px;
+ }
+
+  @include for-tablet-landscape-up {    
+    padding: 100px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+ }
+
+}
+
+@import "./footer.scss";
+
+.clip-path-figure {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clip-path-image {
+  height:200px;
+  width:350px;
+  clip-path: url(#svgPath);
+}
+
+main h2 {
+  font-size: 1.8em;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+
+main .typewrite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+main .typewrite h2 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .4em solid white; /* The typwriter cursor */
+  //@include for-desktop-up {    
+  //  white-space: nowrap; /* Keeps the content on a single line */
+  //}
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .05em; /* Adjust as needed */
+  animation: 
+    typing 1.5s steps(25, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+main figure.animated-svg  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main figure.animated-svg svg {
+  margin-bottom: 5px;
+  width: 220px;
+  height: 220px;
+  transform: scale(0.85);
+    @include for-desktop-up {  
+      transform: scale(1);
+   }
+    @include for-phone-only { 
+      transform: scale(0.8);
+   }
+}
+
+.triangle .inside-trig {
+  animation: inside-trig-morph 1s linear .1s infinite;
+  transform-origin: center;
+  animation-play-state: running;
+}
+
+.triangle .inside-trig:hover {
+  animation-play-state: paused;
+}
+
+@keyframes inside-trig-morph {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.2);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  75% {
+    transform: scale(0);
+  }
+}
+
+main a, footer a {
+  transition: background-color 1s cubic-bezier(.19,1,.22,1);
+  color: rgb(1, 175, 1);
+}
+
+main a:hover, main a:active, footer a:hover, footer a:active {
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0,0,0);
+}
+
+figcaption {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+@import "./carousel.scss";
+
+figure.video { // Youtube video
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+
+  @include for-desktop-up {    
+    width: 65%;
+  }
+}
+
+iframe { // Youtube video
+  border: none;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+@import "./categoria.scss";
+
+@import "./detalle.scss";
+

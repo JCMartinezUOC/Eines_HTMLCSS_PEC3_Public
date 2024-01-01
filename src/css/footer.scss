@@ -1,0 +1,49 @@
+footer {
+    padding: 20px;
+    padding-top: 5px;
+  }
+  
+  footer .footer-logo {
+    margin-top: 20px;
+    margin-bottom:20px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  footer .footer-logo img {
+    height: 64px;
+    max-height: 64px;
+  }
+  
+  footer nav {
+    margin:0;
+  }
+  
+  footer nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    list-style-position: outside;
+    gap: 20px;
+    padding: 0;
+
+    @include for-phone-only {    
+        flex-direction: column;
+     }
+  }
+  
+  footer nav li::marker {
+    content: "| ";
+    font-size: 0.9em;
+
+    @include for-phone-only {    
+        content: "";
+     }
+  }
+  
+  footer nav li:nth-child(1)::marker {
+    content: "";
+  }

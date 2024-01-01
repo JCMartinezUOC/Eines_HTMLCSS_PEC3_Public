@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- For responsive design (media queries) -->
+  <title>WikiWeb: Ghost in the Shell (Portada)</title>
+  <link rel="stylesheet" href="css/styles.scss" />
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <script type="module" src="app.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <include src="src/header.html"></include>
+    <main>
+      <header class="typewrite">
+        <h2>Portada</h2>
+      </header>
+      <picture class="clip-path-figure">
+        <img
+          class="clip-path-image"
+          srcset="./img/clipped.jpg?as=webp&width=350, ./img/clipped.jpg?as=webp&width=600 2x, ./img/clipped.jpg?as=webp&width=800 3x"
+          src="./img/clipped.jpg?width=350"
+          alt="Foto de Sandro Katalina en Unsplash" />
+      </picture>
+      <p><cite lang="en">Ghost in the Shell</cite> es una franquicia japonesa de ciencia ficción <em>cyberpunk</em> basada
+        en la serialización manga del mismo nombre escrita e ilustrada por <strong>Masamune Shirow</strong>. El manga narra la
+        historia de la Sección Policial de Seguridad Pública 9, una organización ficticia anti-cyberterrorista que opera
+        en el Japón de mediados del siglo XXI, liderada por su protagonista: la Mayor <strong>Motoko Kusanagi</strong>.</p>
+      <figure class="carousel">
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <picture>
+                  <source srcset="./img/promo_1.jpg?as=webp&height=800" media="(min-width: 800px)" type="image/webp" />
+                  <source srcset="./img/promo_1.jpg?as=webp&height=600" media="(min-width: 600px)" type="image/webp" />
+                  <source srcset="./img/promo_1.jpg?as=webp&height=450" media="(min-width: 450px)" type="image/webp" />
+                  <img src="./img/promo_1.jpg?height=450" alt="Foto de cheng feng en Unsplash">
+                </picture>
+              </li>
+              <li class="glide__slide">
+                <picture>
+                  <source srcset="./img/promo_2.jpg?as=webp&height=800" media="(min-width: 800px)" type="image/webp" />
+                  <source srcset="./img/promo_2.jpg?as=webp&height=600" media="(min-width: 600px)" type="image/webp" />
+                  <source srcset="./img/promo_2.jpg?as=webp&height=450" media="(min-width: 450px)" type="image/webp" />
+                  <img src="./img/promo_2.jpg?height=450" alt="Foto de Valentin BEAUVAIS en Unsplash">
+                </picture>
+              </li>
+              <li class="glide__slide">
+                <picture>
+                  <source srcset="./img/promo_3.jpg?as=webp&height=800" media="(min-width: 800px)" type="image/webp" />
+                  <source srcset="./img/promo_3.jpg?as=webp&height=600" media="(min-width: 600px)" type="image/webp" />
+                  <source srcset="./img/promo_3.jpg?as=webp&height=450" media="(min-width: 450px)" type="image/webp" />
+                  <img src="./img/promo_3.jpg?height=450" alt="Foto de Ray ZHUANG en Unsplash">
+                </picture>
+              </li>
+              <li class="glide__slide">
+                <picture>
+                  <source srcset="./img/promo_4.jpg?as=webp&height=800" media="(min-width: 800px)" type="image/webp" />
+                  <source srcset="./img/promo_4.jpg?as=webp&height=600" media="(min-width: 600px)" type="image/webp" />
+                  <source srcset="./img/promo_4.jpg?as=webp&height=450" media="(min-width: 450px)" type="image/webp" />
+                  <img src="./img/promo_4.jpg?height=450" alt="Foto de Mike Swigunski en Unsplash">
+                </picture>
+              </li>
+              <li class="glide__slide">
+                <picture>
+                  <source srcset="./img/promo_5.jpg?as=webp&height=800" media="(min-width: 800px)" type="image/webp" />
+                  <source srcset="./img/promo_5.jpg?as=webp&height=600" media="(min-width: 600px)" type="image/webp" />
+                  <source srcset="./img/promo_5.jpg?as=webp&height=450" media="(min-width: 450px)" type="image/webp" />
+                  <img src="./img/promo_5.jpg?height=450" alt="Foto de Irina Iriser en Unsplash">
+                </picture>
+              </li>
+            </ul>
+          </div>
+
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0" aria-label="Mostrar primera imagen"></button>
+            <button class="glide__bullet" data-glide-dir="=1" aria-label="Mostrar segunda imagen"></button>
+            <button class="glide__bullet" data-glide-dir="=2" aria-label="Mostrar tercera imagen"></button>
+            <button class="glide__bullet" data-glide-dir="=3" aria-label="Mostrar cuarta imagen"></button>
+            <button class="glide__bullet" data-glide-dir="=4" aria-label="Mostrar quinta imagen"></button>
+          </div>
+        </div>
+        <figcaption>Fotos de estética <em>cyperpunk</em> inspiradas por <cite lang="en">Ghost in the Shell</cite>
+        </figcaption>
+      </figure>
+    </main>
+    <svg height="0" width="0">
+      <defs>
+        <clipPath id="svgPath" clipPathUnits="objectBoundingBox">
+          <polygon points="0 0, 0.1 1, 0 1" transform="translate(0.02,0)" />
+          <polygon points="0 0, 0.1 1, 0 1" transform="translate(0.14,1) scale(-1, -1)" />
+          <polygon points="0 0, 0.1 1, 0 1" transform="translate(0.16,0)" />
+          <polygon points="0 0, 0.1 1, 0 1" transform="translate(0.28,1) scale(-1, -1)" />
+          <polygon points="0 0, 0.1 1, 0 1" transform="translate(0.30,0)" />
+          <polygon points="0 0, 0.1 1, 0 1" transform="translate(0.42,1) scale(-1, -1)" />
+          <polygon points="0 0, 0.1 1, 0 1" transform="translate(0.44,0)" />
+          <polygon points="0 0, 0.1 1, 0 1" transform="translate(0.56,1) scale(-1, -1)" />
+          <polygon points="0 0, 0.1 1, 0 1" transform="translate(0.58,0)" />
+          <polygon points="0 0, 0.1 1, 0 1" transform="translate(0.70,1) scale(-1, -1)" />
+          <polygon points="0 0, 0.1 1, 0 1" transform="translate(0.72,0)" />
+          <polygon points="0 0, 0.1 1, 0 1" transform="translate(0.84,1) scale(-1, -1)" />
+          <polygon points="0 0, 0.1 1, 0 1" transform="translate(0.86,0)" />
+          <polygon points="0 0, 0.1 1, 0 1" transform="translate(0.98,1) scale(-1, -1)" />
+        </clipPath>
+      </defs>
+    </svg>
+    <include src="src/footer.html"></include>
+  </div>
+  <!--<script type="module" src="app.js"></script>-->
+</body>
+
+</html>
