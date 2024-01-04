@@ -13,6 +13,7 @@
   */
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 html
@@ -212,14 +213,12 @@ figcaption {
 @import "./carousel.scss";
 
 figure.video { // Youtube video
-  width: 85%;
+  width: fit-content;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
   padding-bottom: 20px;
-
-  @include for-desktop-up {    
-    width: 65%;
-  }
 }
 
 iframe { // Youtube video
